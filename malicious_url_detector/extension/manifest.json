@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "URL Malware Detector",
+    "version": "1.0",
+    "description": "Detects malicious URLs in real-time",
+    "permissions": [
+        "tabs",
+        "notifications",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://localhost:5000/*",
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "128": "icon.png"
+    }
+}

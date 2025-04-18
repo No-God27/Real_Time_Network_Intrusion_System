@@ -1,0 +1,37 @@
+<!-- blocked.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blocked Page</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        .warning {
+            color: #dc3545;
+            border: 2px solid #dc3545;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        <h1>⚠️ Security Threat Detected</h1>
+        <p>The following URL was blocked:</p>
+        <p><strong id="blockedUrl"></strong></p>
+        <p>Malicious confidence: <span id="confidence"></span>%</p>
+        <button onclick="window.history.back()">Return to Safety</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('blockedUrl').textContent = decodeURIComponent(params.get('url'));
+        document.getElementById('confidence').textContent = 
+            (parseFloat(params.get('confidence')) * 100).toFixed(2);
+    </script>
+</body>
+</html>

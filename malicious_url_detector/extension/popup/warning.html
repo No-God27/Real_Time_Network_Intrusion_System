@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Warning</title>
+    <style>
+        body { 
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .warning {
+            color: #e74c3c;
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">⚠️ Security Warning</div>
+    <p>The URL <span id="maliciousUrl"></span> has been identified as malicious.</p>
+    <button onclick="window.history.back()">Go Back to Safety</button>
+    
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('maliciousUrl').textContent = decodeURIComponent(params.get('url'));
+    </script>
+</body>
+</html>

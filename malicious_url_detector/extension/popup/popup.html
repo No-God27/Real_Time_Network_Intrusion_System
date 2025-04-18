@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Security Check</h1>
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="Enter URL to check">
+            <button id="checkButton">Check URL</button>
+        </div>
+        <div id="resultContainer">
+            <div id="currentUrlStatus">
+                <h3>Current Page Status:</h3>
+                <p id="currentStatusText">-</p>
+                <p id="currentProbability">-</p>
+            </div>
+            <div id="manualCheckResult">
+                <h3>Manual Check Result:</h3>
+                <p id="manualStatusText">-</p>
+                <p id="manualProbability">-</p>
+            </div>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="loader"></div>
+            <p>Analyzing URL...</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
