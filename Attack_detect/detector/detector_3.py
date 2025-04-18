@@ -5,19 +5,15 @@ import joblib
 import smtplib
 from email.message import EmailMessage
 
-# ==============================
-# CONFIGURATION (REPLACE WITH YOUR CREDENTIALS)
-# ==============================
-
-# Email Configuration (Gmail example)
-EMAIL_ADDRESS = 'climacrop@gmail.com'  # Replace with your Gmail address
-EMAIL_PASSWORD = 'ClimaCrop@123'  # Replace with your Gmail app password
-RECIPIENT_EMAIL = 'swapunil27@gmail.com'  # Replace with recipient's email
 
 
-# ==============================
-# NOTIFICATION FUNCTION
-# ==============================
+
+EMAIL_ADDRESS = 'xxxxxxxxxxxxxxxxxxxx'  # Replace with your Gmail address
+EMAIL_PASSWORD = 'xxxxxxxxxxxxxxxxxxxxxxx'  # Replace with your Gmail app password
+RECIPIENT_EMAIL = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'  # Replace with recipient's email
+
+
+
 
 def send_email_alert(subject, body):
     """Send email alert using SMTP"""
