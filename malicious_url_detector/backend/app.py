@@ -9,10 +9,10 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# ===== YOUR CREDENTIALS =====
-TELEGRAM_TOKEN = '7031540890:AAHrh5Zk4ifjrnTr-qP0ky3v0knv4GoUjsA'
-ADMIN_CHAT_ID = '5609482527'
-# ============================
+
+TELEGRAM_TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+ADMIN_CHAT_ID = 'xxxxxxxxxxxxxxxxxxxxxx7'
+
 
 TELEGRAM_API = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
 
